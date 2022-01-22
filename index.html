@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js" ></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="inputCity">
+			<input class="inputCityName" id="inputCityName" placeholder="Search city" oninput="findSimiliarityCity()">
+			<ul class="inputCityList" id="findedCitysList" style="display: none">
+				<li class="inputCityItem"><button onclick="showCityInfo(this.id)"></button></li>
+				<li class="inputCityItem"><button onclick="showCityInfo(this.id)"></button></li>
+				<li class="inputCityItem"><button onclick="showCityInfo(this.id)"></button></li>
+				<li class="inputCityItem"><button onclick="showCityInfo(this.id)"></button></li>
+				<li class="inputCityItem"><button onclick="showCityInfo(this.id)"></button></li>
+				<li class="inputCityItem"><button onclick="showCityInfo(this.id)"></button></li>
+				<li class="inputCityItem"><button onclick="showCityInfo(this.id)"></button></li>
+			</ul>
+		</div>
+	
+		<div class="weekDay">
+			<ul class="weekDayList" id="weekDayList" style="display: none">
+				<li class="weekDayLine"><img class="imgPreview"><button class="weekDayItem" onclick="ChangeSelectedDay(this.id)"></button></li>
+				<li class="weekDayLine"><img class="imgPreview"><button class="weekDayItem" onclick="ChangeSelectedDay(this.id)"></button></li>
+				<li class="weekDayLine"><img class="imgPreview"><button class="weekDayItem" onclick="ChangeSelectedDay(this.id)"></button></li>
+				<li class="weekDayLine"><img class="imgPreview"><button class="weekDayItem" onclick="ChangeSelectedDay(this.id)"></button></li>
+				<li class="weekDayLine"><img class="imgPreview"><button class="weekDayItem" onclick="ChangeSelectedDay(this.id)"></button></li>
+			</ul>
+		</div>
+	
+		<div class="partDay">
+			<ul class="partDayList" id="partsOfDayList" style="display: none">
+				<li><button class="partDayItem" onclick="ChangeSelectedPartOfDay(this.id)" id="Night">Night</button></li>
+				<li><button class="partDayItem" onclick="ChangeSelectedPartOfDay(this.id)" id="Morning">Morning</button></li>
+				<li><button class="partDayItem" onclick="ChangeSelectedPartOfDay(this.id)" id="Day">Day</button></li>
+				<li><button class="partDayItem" onclick="ChangeSelectedPartOfDay(this.id)" id="Evening">Evening</button></li>
+			</ul>
+		</div>
+
+		<div class="weatherShow"  id="weatherShow" style="display: none;">
+			<a class="temperatureShow" id="temperatureShow">Temperature</a>
+			<p class="descShow" id="descShow">Desc</p>
+			<img class="bigPreview" id="bigPreview" style="display: none;">
+		</div>
+
+		<svg ></svg>
+	</div>
+
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
