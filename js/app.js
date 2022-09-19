@@ -26,7 +26,7 @@ function findSimiliarName(object,findName){
 }
 
 function showCityInfo(clicked_id){
-    fetch(`http://api.openweathermap.org/data/2.5/forecast?id=${clicked_id}&cnt5=&appid=${key}`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?id=${clicked_id}&cnt5=&appid=${key}`)
     .then(res => res.json())
     .then(function(obj){
         cityForecast = obj;
